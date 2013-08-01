@@ -1,0 +1,13 @@
+#!/bin/bash
+# Quick Script to check recursion on DNSBox 200s
+
+set -x
+
+HOSTS="10.200.4.21 10.200.4.22 10.200.6.21 10.200.6.22 10.200.7.21 10.200.7.22 10.195.1.21 10.195.1.22 10.20.2.21 10.20.2.22 138.40.76.1 138.40.77.2"
+
+for host in $HOSTS 
+do
+   nslookup www.google.co.uk $host
+done
+
+exit 0
